@@ -1,27 +1,30 @@
 {
-    "compilerOptions": {
-        "noImplicitAny": true,
-        "module": "commonjs",
-        "target": "es5",
-        "lib": [
-            "es5",
-            "es6",
-            "dom"
-        ],
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "inlineSourceMap": true,
-        "inlineSources": true,
-        "declaration": true,
-        "moduleResolution": "node"
-    },
-    "include": [
-        "src/**/*.ts"
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
     ],
-    "exclude": [
-        "node_modules"
+    "lib": [
+      "es2018",
+      "dom"
     ],
-    "angularCompilerOptions": {
-        "strictMetadataEmit": true
+    "paths": {
+      "ngx-validators": [
+        "dist/ngx-validators"
+      ],
+      "ngx-validators/*": [
+        "dist/ngx-validators/*"
+      ]
     }
+  }
 }
